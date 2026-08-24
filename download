@@ -1,0 +1,35 @@
+# Model weights & checkpoints — publish via Releases or Git LFS, don't commit
+*.pt
+*.pth
+*.onnx
+*.engine
+*.torchscript
+
+# Training/run outputs
+runs/
+citylens_compare/
+citylens/
+wandb/
+*.zip
+
+# Datasets & large media
+data/images/
+data/labels/
+*.jpg
+*.jpeg
+*.png
+*.webp
+!docs/**/*.png
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.python-version
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
