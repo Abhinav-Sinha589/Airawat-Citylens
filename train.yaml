@@ -1,0 +1,37 @@
+# Final YOLO11l training config (run3_continued), imgsz 1024.
+# Mirrors the settings in notebooks/01_train_eval_yolo11l.ipynb.
+
+model: yolo11l.pt          # or resume from a prior best.pt checkpoint
+data: ../data/data.yaml
+
+imgsz: 1024
+batch: 8
+epochs: 60
+patience: 50
+
+# optimizer / schedule
+optimizer: AdamW
+lr0: 0.0002
+lrf: 0.005
+cos_lr: true
+weight_decay: 0.0005
+amp: true
+
+# augmentation
+mosaic: 1.0
+close_mosaic: 15
+mixup: 0.05
+copy_paste: 0.3
+hsv_h: 0.015
+hsv_s: 0.8
+hsv_v: 0.5
+degrees: 10.0
+translate: 0.1
+scale: 0.6
+fliplr: 0.5
+erasing: 0.4
+
+cache: ram
+save_period: 10
+project: citylens
+name: run3_continued
